@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%=currentday%></h1>
+    </div>
+    <div class="box">
+       
+            <h4>ADD OR REMOVE LIST</h4>
+           <% for(var i=0;i<newlistitem.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= newlistitem[i] %> </p>
+            </div>
+             <% } %>
+             <form action="/" class="item" method="post">
+                <input type="text" name="newitem" autocomplete="off" placeholder="New Item">
+                <button type="submit" name="button" >➕</button>
+            </form>
+         </div>
+         <footer>
+            Made with ❤ by Tejaswi Dhyani.
+        </footer>
+   
+</body>
+</html>
