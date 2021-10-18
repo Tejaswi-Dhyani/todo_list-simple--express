@@ -27,6 +27,6 @@ app.get("/",(req,res)=>{
        res.redirect("/"); 
     // res.send(`${item}`);
     });
-   app.listen(8080,()=>{
+   app.listen(process.env.PORT||8080,()=>{
     console.log("server started on port 8080");
     });
